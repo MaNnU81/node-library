@@ -56,8 +56,9 @@ export default class Library {
         for (const user of this.users) {
             console.log(user.toString());
         }
+        
     }
-
+  
     borrowBook(user, book){
         const isAvailable = this.isBookAvailable(book.isbn);
         if(!isAvailable){

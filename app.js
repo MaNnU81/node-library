@@ -14,7 +14,7 @@ while (true) {
                     "1)aggiungi utente\n" +
                     "2)aggiungi libro\n" +
                     "3)lista utenti\n" +
-                    "4)aggiungi libri\n" +
+                    "4)lista dei libri\n" +
                     "5)esci\n" +
                     "inserisci il numero della funzionalita desiderata\n"
 
@@ -51,24 +51,31 @@ while (true) {
 
 
 function addUser(){
-const id = question("Qual e' il tuo numero tessera?");
-const name = question("Qual e' il tuo nome e cognome?");
+const id = question("inserisci il  numero di tessera ");
+const name = question("inserisci il nome ed il cognome ");
 
 const user = {id, name}
 library.addUser(user);
 console.log(`hai inserito correttamente l'utente ${name}`);
-
 }
-
+isbn, title, author
 function addBook(){
-    
+     const  isbn = question("inserisci il codice isbn del libro ");
+     const  title = question("inserisci il titolo del libro ");
+     const  author = question("inserisci l'autore del libro ")
+
+     const book = {isbn, title, author};
+     console.log(`hai inserito correttamente il libro ${title}`);
 }
 
 function listUser(){
     
+    console.log("Lista degli utenti:", library.listUsers());
+   
 }
 
 function listBook(){
     
+    console.log("Lista dei libri:", library.listBooks());
 }
 
