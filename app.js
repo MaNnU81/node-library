@@ -54,10 +54,11 @@ function addUser(){
 const id = question("inserisci il  numero di tessera ");
 const name = question("inserisci il nome ed il cognome ");
 
-const user = {id, name}
+const user =  {id, name}
 library.addUser(user);
 console.log(`hai inserito correttamente l'utente ${name}`);
 }
+
 isbn, title, author
 function addBook(){
      const  isbn = question("inserisci il codice isbn del libro ");
